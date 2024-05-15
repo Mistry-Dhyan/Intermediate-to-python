@@ -16,3 +16,21 @@ while num.isdigit() == False:
     num = input("What is your favourite number?")
 else:num = int(num)
 print(num,type(num))
+
+num1 = input("What is your favourite number?")
+while num1.isdigit() == False:
+    print('Why would you think that',num,'is a number????!!!!')
+    num1 = input("What is your favourite number?")
+else:num1 = int(num1)
+print(num1,type(num1))
+
+print(num +num1)
+
+num = input("What is your favourite number?")
+while num.isdigit() == False:
+    print('Why would you think that',num,'is a number????!!!!')
+    num = input("What is your favourite number?")
+else:num = int(num)
+print(num,type(num))
+
+print('Row, Row, Row your boat'.replace('R','M'))

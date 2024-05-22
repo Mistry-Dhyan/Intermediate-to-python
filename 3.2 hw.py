@@ -26,3 +26,20 @@ print(num, type(num))
 a = input('enter a string for me to tell the length of : ')
 b = len(a)
 print(len(a))
+
+
+
+a = input('enter your your user name for me to make it stronger! : ')
+peidot_counter = a.count('.')
+dot = a.find('.')
+at_counter = a.count('@')
+while peidot_counter != 1 and dot != -3 and at_counter != 1:
+  print('not strong enough! : ')
+  a = input('enter your your user name for me to make it stronger! : ')
+  at_counter = 0
+  peidot_counter = 0
+  peidot_counter = a.count('.')
+  dot = a.find('.')
+  at_counter = a.count('@')
+print(a,'strong enough!')
+print('In fact that',a,'is almost the best username in the world!')

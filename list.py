@@ -36,3 +36,21 @@ while True:
     elif edit == 'done':
         print(lst)
         break
+while True:
+    editmore = input('Do you want to sort the list from a-z or reverse the whole list in your chart or both or done? : ')
+    if editmore == 'sort':
+        lst.sort()
+        print(lst)
+        break
+    elif editmore == 'reverse':
+        lst.reverse()
+        print(lst)
+        break
+    elif editmore == 'both':
+        lst.sort()
+        lst.reverse()
+        print(lst)
+        break
+    elif editmore == 'done':
+        print(lst)
+        break

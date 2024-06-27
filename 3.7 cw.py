@@ -21,7 +21,7 @@ title = "The Iron Giant"
 def get_first_word(sentence):
     space_index = sentence.index(' ')
     first_word = sentence[:space_index]
-    
+
     print(sentence)
     print(space_index)
     print(first_word) 
@@ -63,3 +63,99 @@ def max(*nums):
     return biggest_so_far
 print(max(1,2,34,7))
 print(max()) # what if we give it no arguments?
+
+def employee_info(name, position = "Labourer"):
+    print(name, "\t", position)
+
+# you can give them in any order if you use their names!
+employee_info(position="Supervisor", name="Kira")
+
+def max(*nums, positive = True):
+    if not positive:
+        return "This function only works for positive numbers!"
+    biggest_so_far = 0 # this only works for positive numbers
+    for num in nums: # nums is a collection!
+        if num > biggest_so_far:
+            biggest_so_far = num
+    return biggest_so_far
+
+# the collections still must come first
+print(max(1,2,3,4,positive = True))
+print(max(-2,-1,-10, positive = False))
+
+# A global type of code is when the code can be acsesd from anywhere in the code.A local code is the type of code that can only be called from the code in the funtion.
+# If you use the local code outside of the funtion it will give you an error or do nothing.
+
+def minnum(lst):
+    small = lst[0]
+    for letter in lst:
+        if letter < small:
+            small = letter
+    return(small)
+
+def int_input(prompt):
+    num = input(prompt)
+    while num.isdigit() == False:
+         num = input(prompt)
+    return int(num)
+
+lst = []
+len_num = int_input('How many digits do you want to add? : ')
+for i in range(len_num):
+    item = int_input('Enter any digit that. : ')
+    lst.append(item)
+
+print('smallest number is : ',minnum(lst),'from',lst,'.')
+
+names = []
+usein = input("Enter a name or if you don't want to add more say done. : ")
+names.append(usein)
+while True:
+    if 'done' in usein:
+        break
+    usein = input("Enter a name or if you don't want to add more say done. : ")
+    names.append(usein)
+for name in names:
+    print(name, end='\t')
+
+
+def min_version(*nums):
+    small = nums[0]
+    for num in nums:
+        if num<small:
+            small = num
+    return small
+
+print(min_version(3,6,8,-9,0,-80,99,-4))
+
+def name_printer(*names):
+    for name in names:
+        print(name, end='\t')
+
+name_printer('Bob','billy','Sam' , 'cristorpher' , 'alexzander' , 'alex')
+
+print('\n')
+def identification(name = 'N/A',phone = 'XXX-XXX-XXXX'):
+    print('name : ',name,'\nphone number : ',phone)
+identification('Bobey Mikflaren alexander','911-911-9111')
+identification('Bobey Mikflaren alexander')
+identification(phone='911-911-9111')
+identification()
+
+def area_rectangle(width):
+    return width * width
+print(area_rectangle(10))
+
+def sum_or_product(*nums, bool):
+    if bool == True:
+        sum = 0
+        for num in nums:
+            sum += num
+        return sum
+    else:
+        product = 1
+        for num in nums:
+            product *= num
+        return product
+
+print(sum_or_product(1,5,1,9,5,3, bool=False))

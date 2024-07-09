@@ -159,3 +159,6 @@ def sum_or_product(*nums, bool):
         return product
 
 print(sum_or_product(1,5,1,9,5,3, bool=False))
+
+# Optional Parameters are usefull so when you are wanting to write less code and want to put a/some certain carrector/s after the words you want.
+# Keyword Parameters are useful so instead, the caller (code using the function) could give information using the parameter's name!

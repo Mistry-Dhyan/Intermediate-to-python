@@ -1,0 +1,28 @@
+user_dictionary = {}
+q = 0
+while True:
+    a = input('Do you want to add any thing to your dictionary, remove any item, replace the dictionary or exit the dictionary? : ')
+    if a == 'add':
+        q += 1
+        b = input('Enter the key of your thing you want to add. : ')
+        c = input('Enter the value of your thing you want to add. : ')
+        user_dictionary.update({b : c})
+    elif a == 'remove':
+        if q == 0 :
+            print("Sorry, you don't have enough itemes in dictionary!")
+            break
+        ur = input('What do you want to remove in your dictionary. : ')
+        user_dictionary.pop(ur)
+    elif a == 'replace':
+        if q == 0 :
+            print("Sorry, you don't have enough itemes in dictionary!")
+            break
+        ri = input('What do you want to replace? : ')
+        rw = input('What do you want to replace ' + ri + ' with? : ')
+        rv = input('What is the value of that? : ')
+        user_dictionary.pop(ri)
+        user_dictionary.update({rw : rv})
+    elif a == 'exit':
+        print('Your full dictionary is ' , user_dictionary , '.')
+        break
+    print('Your full dictionary is ' , user_dictionary , '.')
